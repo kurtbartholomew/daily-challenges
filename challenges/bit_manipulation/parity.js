@@ -7,7 +7,7 @@
  * Returns: 0
  */
 
-function bitParity () {
+function bitParity (x) {
   // TODO
 }
 
