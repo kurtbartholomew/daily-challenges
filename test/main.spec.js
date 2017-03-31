@@ -1,9 +1,10 @@
 /* global describe, it */
-import { assert } from 'chai'
-import returnOne from '../challenges/main'
 
-describe('overall,', function () {
-  it('should do things everywhere', function () {
-    assert.equal(returnOne(), 2)
+import { assert } from 'chai'
+import templateFunction from '../challenges/example'
+
+describe('Template', function () {
+  it('should use this structure', function () {
+    assert.equal(templateFunction(), 2)
   })
 })
