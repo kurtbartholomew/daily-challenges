@@ -10,12 +10,30 @@ import bitDivide from '../challenges/bit_manipulation/bitDivide'
 import bitPower from '../challenges/bit_manipulation/bitExponentiation'
 
 describe('Bit Manipulation', function () {
+  var createLargeInts = function thirtyTwoBitInts (count) {
+    var nums = []
+    while (count > 0) {
+      nums.push(Math.floor(Math.random() * (1 << 20) + 1))
+      count--
+    }
+    return nums
+  }
+
   describe('Bit Parity', function () {
-    it('should return 1 if x = 14', function () {
+    it('should return 1 if parity is odd', function () {
+      this.slow(-1)
       assert.equal(returnBitParity(14), 1)
     })
-    it('should return 0 if x = 538', function () {
+    it('should return 0 if parity is even', function () {
+      this.slow(-1)
       assert.equal(returnBitParity(538), 0)
+    })
+    it('should run well for a large amount of 32 bit numbers', function () {
+      this.slow(-1)
+      var nums = createLargeInts(100000)
+      for (var num of nums) {
+        returnBitParity(num)
+      }
     })
   })
   describe('Bit Swap', function () {

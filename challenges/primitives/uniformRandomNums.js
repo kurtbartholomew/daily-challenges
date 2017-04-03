@@ -9,8 +9,8 @@
  * generate the numbers 1 through 10
  */
 
-function isIntPalindrome (randZeroToOne, x, y) {
+function uninformRandoms (randZeroToOne, x, y) {
   // TODO
 }
 
-export default isIntPalindrome
+export default uninformRandoms
