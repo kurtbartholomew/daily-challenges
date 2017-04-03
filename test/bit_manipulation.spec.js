@@ -5,6 +5,7 @@ import returnBitParity from '../challenges/bit_manipulation/parity'
 import bitSwap from '../challenges/bit_manipulation/swapBits'
 import bitReverse from '../challenges/bit_manipulation/reverseBits'
 import findClosestInt from '../challenges/bit_manipulation/findClosestWeightInt'
+import bitAdd from '../challenges/bit_manipulation/bitAdd'
 import bitMultiply from '../challenges/bit_manipulation/bitMultiply'
 import bitDivide from '../challenges/bit_manipulation/bitDivide'
 import bitPower from '../challenges/bit_manipulation/bitExponentiation'
@@ -38,23 +39,33 @@ describe('Bit Manipulation', function () {
   })
   describe('Bit Swap', function () {
     it('should properly swap bits if they differ', function () {
+      this.slow(-1)
       assert.equal(bitSwap(73, 1, 6), 11)
     })
     it('should return the same number if bits are the same', function () {
+      this.slow(-1)
       assert.equal(bitSwap(125, 2, 5), 125)
     })
   })
   describe('Bit Reversal', function () {
     it('should return same number if bits are symmetrical', function () {
+      this.slow(-1)
       assert.equal(bitReverse(325), 325)
     })
     it('should reverse bits if not symmetrical', function () {
+      this.slow(-1)
       assert.equal(bitReverse(125), 95)
     })
   })
   describe('Find Closest Integer By Bit Weight', function () {
     it('should find the closest weight integer', function () {
-      assert.equal(findClosestInt(43), 46)
+      this.slow(-1)
+      assert.equal(findClosestInt(45), 46)
+    })
+  })
+  describe('Bitwise Addition', function () {
+    it('should add non-negative integers', function () {
+      assert.equal(bitAdd(12, 8), 20)
     })
   })
   describe('Bitwise Multiplication', function () {
