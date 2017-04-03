@@ -9,7 +9,12 @@
  */
 
 function swapBits (x, i, j) {
-  // TODO
+  var ithBit = ((x >> i) & 1)
+  var jthBit = ((x >> j) & 1)
+  if (ithBit !== jthBit) {
+    x ^= ((1 << i) | (1 << j))
+  }
+  return x
 }
 
 export default swapBits

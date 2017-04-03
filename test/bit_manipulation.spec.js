@@ -30,7 +30,7 @@ describe('Bit Manipulation', function () {
     })
     it('should run well for a large amount of 32 bit numbers', function () {
       this.slow(-1)
-      var nums = createLargeInts(100000)
+      var nums = createLargeInts(10000)
       for (var num of nums) {
         returnBitParity(num)
       }
@@ -38,7 +38,7 @@ describe('Bit Manipulation', function () {
   })
   describe('Bit Swap', function () {
     it('should properly swap bits if they differ', function () {
-      assert.equal(bitSwap(325, 2, 5), 203)
+      assert.equal(bitSwap(73, 1, 6), 11)
     })
     it('should return the same number if bits are the same', function () {
       assert.equal(bitSwap(125, 2, 5), 125)
