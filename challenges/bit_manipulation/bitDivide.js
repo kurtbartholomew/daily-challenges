@@ -11,7 +11,23 @@
  */
 
 function bitDivide (x, y) {
-  // TODO
+  var WORD_SIZE = 16
+  var power = WORD_SIZE
+  var yToIthPower = y << power
+  var quotient = 0
+  // continue dividing until x < y
+  while (x > y) {
+    // find a power of y that can be subtracted from x
+    while (yToIthPower > x) {
+      // incrementally reduce y*2^i to y*2*i-1
+      yToIthPower = yToIthPower >> 1
+      power--
+    }
+    // store the number of y's subtracted from x already
+    quotient += (1 << power)
+    x = x - yToIthPower
+  }
+  return quotient
 }
 
 export default bitDivide
