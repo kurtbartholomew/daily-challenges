@@ -86,7 +86,7 @@ describe('Bit Manipulation', function () {
       assert.equal(bitPower(5, 7), 78125)
     })
     it('should exponentiate negative integers', function () {
-      assert.equal(bitPower(1000, -3), 0.001)
+      assert.equal(bitPower(1000, -3), 1e-9)
     })
   })
 })
