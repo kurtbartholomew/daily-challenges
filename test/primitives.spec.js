@@ -1,10 +1,16 @@
 /* global describe, it */
 
 import { assert } from 'chai'
+import reverseDigits from '../challenges/primitives/reverseDigits'
 import isIntPalindrome from '../challenges/primitives/integerPalindrome'
-import uniformRandomNums from '../challenges/primitives/uniformRandomNums.js'
+import uniformRandomNums from '../challenges/primitives/uniformRandomNums'
 
 describe('Primitives', function () {
+  describe('Decimal Digit Reversal', function () {
+    it('should return an inverted integer', function () {
+      assert.equal(reverseDigits(5023853), 3583205)
+    })
+  })
   describe('Integer Palindrome', function () {
     it('should return true if int is a palindrome', function () {
       assert.equal(isIntPalindrome(747), true)
