@@ -45,11 +45,11 @@ describe('Bit Manipulation', function () {
     })
   })
   describe('Bit Reversal', function () {
-    it('should reverse bits properly', function () {
-      assert.equal(bitReverse(325), 203)
-    })
     it('should return same number if bits are symmetrical', function () {
-      assert.equal(bitReverse(125), 125)
+      assert.equal(bitReverse(325), 325)
+    })
+    it('should reverse bits if not symmetrical', function () {
+      assert.equal(bitReverse(125), 95)
     })
   })
   describe('Find Closest Integer By Bit Weight', function () {

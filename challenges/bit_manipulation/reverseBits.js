@@ -9,7 +9,15 @@
  */
 
 function reverseBits (x) {
-  // TODO
+  console.log((x).toString(2))
+  var reverse = 0
+  while (x !== 0) {
+    reverse = reverse << 1
+    reverse += x & 1
+    x = x >>> 1
+  }
+  console.log((reverse).toString(2))
+  return reverse
 }
 
 export default reverseBits
